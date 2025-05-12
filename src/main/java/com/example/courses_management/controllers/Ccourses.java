@@ -1,7 +1,7 @@
 package com.example.courses_management.controllers;
 
 import com.example.courses_management.connection.DBconnection;
-import com.example.courses_management.models.course;
+import com.example.courses_management.model.course;
 
 import java.sql.*;
 import java.util.ArrayList;

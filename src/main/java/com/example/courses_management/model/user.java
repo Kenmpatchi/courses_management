@@ -1,17 +1,45 @@
-package com.example.courses_management.models;
+package com.example.courses_management.model;
 
 public class user {
+    private int user_id;
+    private String role;
     private String first_name;
     private String last_name;
     private String email;
-    private Number phone;
+    private int phone;
     private String password;
-    public user(String first_name, String last_name, String email, Number phone, String password){
+    public user(String first_name, String last_name, String email, int phone, String password){
         this.first_name=first_name;
         this.last_name=last_name;
         this.email=email;
         this.phone=phone;
         this.password=password;
+        this.role="student";
+    }
+    public user(int id,String first_name,String last_name,int phone,String email,String password,String role){
+        this.user_id=id;
+        this.first_name=first_name;
+        this.last_name=last_name;
+        this.email=email;
+        this.phone=phone;
+        this.password=password;
+        if(role.equals(null)){
+        this.role="student";}
+        else{
+            this.role=role;
+        }
+    }
+
+    public int getId() {
+        return user_id;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public void setFirst_name(String first_name) {
@@ -26,7 +54,7 @@ public class user {
         this.email = email;
     }
 
-    public void setPhone(Number phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
 
@@ -46,7 +74,7 @@ public class user {
         return email;
     }
 
-    public Number getPhone() {
+    public int getPhone() {
         return phone;
     }
 

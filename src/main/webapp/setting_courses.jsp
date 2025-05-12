@@ -11,13 +11,36 @@
     <title>$Title$</title>
   </head>
   <body>
-
+<div style="display: flex">
   <form action="addCourse" method="get">
-    <input type="text" placeholder="put name of the course" name="name">
-    <input type="text" placeholder="put title of the course" name="title">
-    <input type="text" placeholder="put description" name="description">
-    <textarea placeholder="put the content of the course" name="main_content"></textarea>
-    <input type="submit" value="add">
+  <table>
+    <tr><td>
+      put name of the course
+    </td><td>
+      <input type="text" name="name">
+    </td></tr>
+    <tr><td>
+      put title of the course
+    </td><td>
+      <input type="text" name="title">
+    </td></tr>
+    <tr><td>
+      put description:
+    </td><td>
+      <input type="text" name="description">
+    </td></tr>
+    <tr><td>
+      put the content of the course :
+    </td><td>
+      <textarea name="main_content"></textarea>
+    </td></tr>
+    <tr><td rowspan="2">
+      <input type="submit" value="add">
+    </td><</tr>
+  </table>
   </form>
+</div>
+
+
   </body>
 </html>

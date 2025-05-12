@@ -1,8 +1,7 @@
 package com.example.courses_management.course_servlets;
 
-import com.example.courses_management.connection.DBconnection;
 import com.example.courses_management.controllers.Ccourses;
-import com.example.courses_management.models.course;
+import com.example.courses_management.model.course;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

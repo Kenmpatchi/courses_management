@@ -5,12 +5,10 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import com.example.courses_management.models.course;
+import com.example.courses_management.model.course;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class afficheCourses extends HttpServlet {
     public afficheCourses(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
@@ -26,11 +24,14 @@ public class afficheCourses extends HttpServlet {
                         "<td><form action='viewCourse' method='get'>" +
                         "<input type='hidden' name='id' value='"+c.getCourse_id()+"'>" +
                         "<input type='submit' value='view'>" +
-                        "</form></td></tr>";
+                        "</form></td>" +
+                        "<td><form action='updateCourse' method='post'>" +
+                        "<input type='hidden' name='id' value='"+c.getCourse_id()+"'>" +
+                        "<input type='submit' value='update'>" +
+                        " </form></td></tr>";
             }
             courses += "</table>";
             req.setAttribute("courses", courses);
-
             req.getRequestDispatcher("courses.jsp").forward(req, res);
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
