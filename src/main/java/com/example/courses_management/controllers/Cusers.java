@@ -25,12 +25,16 @@ public class Cusers {
     }
     public List<user> selectAll()throws SQLException{
         st=conn.createStatement();
-        rs=st.executeQuery("select * from course");
+        rs=st.executeQuery("select * from user");
         List<user> users=new ArrayList<>();
         while (rs.next()){
             users.add(new user(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7)));
         }
         return users;
+    }
+    public void change(int id,String role)throws SQLException{
+        st=conn.createStatement();
+        st.executeUpdate("update user set role='"+role+"'where user_id='"+id+"';");
     }
     public user selectOne(String email)throws SQLException{
         st=conn.createStatement();
@@ -48,6 +52,8 @@ public class Cusers {
     }
     public void delete(int id)throws SQLException{
         st=conn.createStatement();
+        st.executeUpdate("delete from course where group_id in (select group_id from study_group where professor_id = '"+id+"')");
+        st.executeUpdate("delete from study_group where Professor_id='"+id+"'");
         st.executeUpdate("delete from user where user_id='"+id+"'");
     }
     public void update(user u,int id)throws SQLException{

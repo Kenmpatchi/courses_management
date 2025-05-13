@@ -14,15 +14,15 @@ import java.sql.SQLException;
 public class updateCourse_Servlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
         try{
-            int id= Integer.parseInt(req.getParameter("id"));
+            int course_id= Integer.parseInt(req.getParameter("course_id"));
             String Name=req.getParameter("name");
             String title=req.getParameter("title");
             String description=req.getParameter("description");
             String main_content=req.getParameter("main_content");
             course c=new course(Name,title,description,main_content);
             Ccourses Cc=new Ccourses();
-            Cc.update(c,id);
-            new afficheCourses(req,res);
+            Cc.update(c,course_id);
+            new viewCourses(Cc.selectbyid(course_id).getGroup_id(),req,res);
         }
         catch (ClassNotFoundException | SQLException e){
             throw new RuntimeException(e);
@@ -31,6 +31,6 @@ public class updateCourse_Servlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
         int id = Integer.parseInt(req.getParameter("id"));
         req.setAttribute("id",id);
-        req.getRequestDispatcher("update_course.jsp").forward(req, res);
+        req.getRequestDispatcher("Pupdate_course.jsp").forward(req, res);
     }
 }

@@ -1,16 +1,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: hamza bettaibi
-  Date: 5/12/2025
-  Time: 4:49 PM
+  Date: 5/11/2025
+  Time: 11:35 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>courses</title>
 </head>
 <body>
-    ${users}
+      ${courses}
+      <a href="Padd_courses.jsp?group_id=<%=request.getAttribute("group_id")%>">add course from here 👌</a>
 </body>
 </html>

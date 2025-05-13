@@ -1,6 +1,8 @@
 package com.example.courses_management.user_servlets;
 
 import com.example.courses_management.controllers.Cusers;
+import com.example.courses_management.group_servlet.viewAllgroups;
+import com.example.courses_management.group_servlet.viewGroups;
 import com.example.courses_management.model.user;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -21,14 +23,17 @@ public class Account_servlet extends HttpServlet {
          int phone=Integer.parseInt(req.getParameter("phone"));
          String password=req.getParameter("password");
          String valpass=req.getParameter("valpass");
-         if(!password.equals(valpass))throw new IOException("invalide password");
+         if(!password.equals(valpass))throw new Exception("invalide password");
          user user=new user(first_name,last_name,email,phone,password);
             Cusers User=new Cusers();
             User.insert(user);
-            req.getRequestDispatcher("main.jsp").forward(req,res);
+            req.getRequestDispatcher("Sview_groups.jsp").forward(req,res);
         }
         catch(SQLException|ClassNotFoundException e){
             throw new RuntimeException(e);
+        }
+        catch (Exception ex){
+
         }
     }
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
@@ -39,20 +44,20 @@ public class Account_servlet extends HttpServlet {
             user data=User.selectOne(email);
             if(!password.equals(data.getPassword()))throw new IOException("invalide password");
             if(data.getRole().equals("admin")){
-                String users="<table>";
-                for(user usr:User.selectAll()){
-                    users+="<tr><td>"+usr.getFirst_name()+"</td><td>"+usr.getLast_name()+"</td><td>"+usr.getEmail()+"</td>" +
-                            "<td><form action='role' method=''><select value="+usr.getRole()+" name='change_role'><opt>professor</opt><opt>student</opt><opt>admin</opt></select>" +
-                            "<input type='hidden' value="+usr.getId()+"><input type='submit' value='change'>" +
-                            "</td><tr>";
-                }
-                users+="</table>";
-                req.setAttribute("users",users);
-                req.getRequestDispatcher("admin.jsp").forward(req,res);
+                new view_users(req,res);
+            }
+            else if(data.getRole().equals("professor")){
+                new viewGroups(data.getId(),req,res);
+            }
+            else{
+                new viewAllgroups(req,res);
             }
         }
         catch(SQLException|ClassNotFoundException e){
             throw new RuntimeException(e);
+        }
+        catch (Exception ex){
+
         }
     }
 }

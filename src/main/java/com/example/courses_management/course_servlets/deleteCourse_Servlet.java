@@ -14,10 +14,11 @@ import java.sql.SQLException;
 public class deleteCourse_Servlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
         try{
-            int id=Integer.parseInt(req.getParameter("id"));
+            int course_id=Integer.parseInt(req.getParameter("course_id"));
             Ccourses cc=new Ccourses();
-            cc.delete(id);
-            new afficheCourses(req,res);
+            int group_id=cc.selectbyid(course_id).getGroup_id();
+            cc.delete(course_id);
+            new viewCourses(group_id,req,res);
         }
         catch(SQLException|ClassNotFoundException e){
             throw new RuntimeException(e);

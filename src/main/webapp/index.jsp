@@ -16,7 +16,7 @@
             <input type="text" name="last_name">
         </td></tr>
         <tr><td>email :</td><td>
-            <input type="text" name="email">
+            <input type="email" name="email">
         </td></tr>
         <tr><td>phone number :</td><td>
             <input type="number" name="phone">

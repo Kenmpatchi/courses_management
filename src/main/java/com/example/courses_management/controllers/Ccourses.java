@@ -17,16 +17,16 @@ public class Ccourses {
         db.connect();
         conn=db.getConn();
     }
-    public void insert(course c)throws SQLException {
+    public void insert(course c,int id)throws SQLException {
         st=conn.createStatement();
-        st.executeUpdate("insert into course(name,title,description,main_content)values('"+c.getName()+"','"+c.getTitle()+ "','"+c.getDescription()+"','"+c.getMain_content()+"')");
+        st.executeUpdate("insert into course(name,title,description,main_content,group_id)values('"+c.getName()+"','"+c.getTitle()+ "','"+c.getDescription()+"','"+c.getMain_content()+"','"+id+"')");
     }
-    public List<course> selectAll()throws SQLException{
+    public List<course> selectAll(int id)throws SQLException{
         st=conn.createStatement();
-        rs=st.executeQuery("select * from course");
+        rs=st.executeQuery("select * from course where group_id='"+id+"'");
         List<course> courses=new ArrayList<>();
         while (rs.next()){
-            courses.add(new course( rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5)));
+            courses.add(new course( rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4), rs.getString(5),rs.getInt(6)));
         }
         return courses;
     }
@@ -34,7 +34,7 @@ public class Ccourses {
         st=conn.createStatement();
         rs=st.executeQuery("select * from course where course_id='"+id+"'");
         rs.next();
-        course data=new course( rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5));
+        course data=new course(rs.getInt(1),rs.getString(2),rs.getString(3), rs.getString(4), rs.getString(5),rs.getInt(6));
         return data;
     }
     public void delete(int id)throws SQLException{

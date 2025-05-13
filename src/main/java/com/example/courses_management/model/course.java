@@ -6,18 +6,24 @@ public class course {
     private String description;
     private String main_content;
     private int course_id;
+    private int group_id;
     public course(String Name,String title,String description,String main_content){
         this.Name=Name;
         this.title=title;
         this.description=description;
         this.main_content=main_content;
     }
-    public course(int course_id,String Name,String title,String description,String main_content){
+    public course(int course_id,String Name,String title,String description,String main_content,int group_id){
         this.course_id=course_id;
+        this.group_id=group_id;
         this.Name=Name;
         this.title=title;
         this.description=description;
         this.main_content=main_content;
+    }
+
+    public int getGroup_id() {
+        return group_id;
     }
 
     public int getCourse_id() {
@@ -54,5 +60,9 @@ public class course {
 
     public void setMain_content(String main_content) {
         this.main_content = main_content;
+    }
+
+    public String tostring() {
+        return course_id+" name "+Name+" title "+title;
     }
 }

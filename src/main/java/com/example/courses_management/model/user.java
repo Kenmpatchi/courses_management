@@ -81,4 +81,7 @@ public class user {
     public String getPassword() {
         return password;
     }
+    public String tostring(){
+        return "name "+first_name+" "+last_name+" id "+user_id+" email "+email+" phone number "+phone+" he is a/an "+role;
+    }
 }

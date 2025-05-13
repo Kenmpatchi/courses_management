@@ -35,7 +35,7 @@
                 <textarea name="main_content"></textarea>
             </td></tr>
             <tr><td rowspan="2">
-                <input type="hidden" name="id" value="<%=request.getAttribute("id")%>">
+                <input type="hidden" name="course_id" value="<%=request.getParameter("course_id")%>">
                 <input type="submit" value="update">
             </td><</tr>
         </table>

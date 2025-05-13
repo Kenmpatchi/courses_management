@@ -16,7 +16,7 @@
 <form action="account" method="post">
 <table>
 <tr><td>email :</td><td>
-    <input type="text" name="email">
+    <input type="email" name="email">
 </td></tr>
 <tr><td>password :</td><td>
     <input type="password" name="password">
