@@ -10,44 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="150f6605-9fcf-4345-8042-46dc426ac397" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/controllers/Cgroups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/ScoursesView_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/viewCourses.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/viewCourses_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/group_servlet/SettingGroup_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/group_servlet/updateGroup_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/group_servlet/viewAllgroups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/group_servlet/viewGroups.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/settingUser_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/updateUser_servlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/view_users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Padd_groups.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Pupdate_groups.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Pview_groups.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Sview_courses.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Sview_groups.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/view_main_course.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/controllers/Ccourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/controllers/Ccourses.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/controllers/Cusers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/controllers/Cusers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/addCourse_Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/addCourse_Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/afficheCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/viewCourse_servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/afficheCourses.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/deleteCourse_Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/deleteCourse_Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/updateCourse_Servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/course_servlets/updateCourse_Servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/group.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/user.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/model/user.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/Account_servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/Account_servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/professorRole_servlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/courses_management/user_servlets/professorRole_servlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view_user.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pview_courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/role.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/setting_courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Padd_courses.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/update_course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Pupdate_course.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/viewCourse.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewCourse.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +193,8 @@
       <workItem from="1747155110196" duration="10217000" />
       <workItem from="1747165933587" duration="5000" />
       <workItem from="1747166973215" duration="12912000" />
+      <workItem from="1747180017036" duration="26000" />
+      <workItem from="1747190849699" duration="3854000" />
     </task>
     <servers />
   </component>

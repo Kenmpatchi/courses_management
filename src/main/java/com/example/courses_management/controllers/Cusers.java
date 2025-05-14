@@ -19,8 +19,13 @@ public class Cusers {
         db.connect();
         conn=db.getConn();
     }
-    public void insert(user u)throws SQLException {
+    public void insert(user u)throws SQLException,Exception {
         st=conn.createStatement();
+        rs=st.executeQuery("select count(*) from user where email='"+u.getEmail()+"'");
+        rs.next();
+        int nb=rs.getInt(1);
+        if(nb==1)throw new Exception("invalide email");
+        rs.close();
         st.executeUpdate("insert into user(first_name,last_name,email,phone,password,role)values('"+u.getFirst_name()+"','"+u.getLast_name()+ "','"+u.getEmail()+"','"+u.getPhone()+"','"+u.getPassword()+"','"+u.getRole()+"')");
     }
     public List<user> selectAll()throws SQLException{
@@ -36,8 +41,13 @@ public class Cusers {
         st=conn.createStatement();
         st.executeUpdate("update user set role='"+role+"'where user_id='"+id+"';");
     }
-    public user selectOne(String email)throws SQLException{
+    public user selectOne(String email)throws SQLException,Exception{
         st=conn.createStatement();
+        rs=st.executeQuery("select count(*) from user where email='"+email+"'");
+        rs.next();
+        int nb=rs.getInt(1);
+        if(nb==0)throw new Exception("not found");
+        rs.close();
         rs=st.executeQuery("select * from user where email='"+email+"'");
         rs.next();
         user data=new user(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4),rs.getString(5),rs.getString(6),rs.getString(7));

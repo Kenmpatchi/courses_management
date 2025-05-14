@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 
 @WebServlet(name = "account_servlet",value = "/account")
@@ -27,13 +28,14 @@ public class Account_servlet extends HttpServlet {
          user user=new user(first_name,last_name,email,phone,password);
             Cusers User=new Cusers();
             User.insert(user);
-            req.getRequestDispatcher("Sview_groups.jsp").forward(req,res);
+            new viewAllgroups(req,res);
         }
         catch(SQLException|ClassNotFoundException e){
             throw new RuntimeException(e);
         }
         catch (Exception ex){
-
+            System.err.println(ex.getMessage());
+            req.getRequestDispatcher("index.jsp").forward(req,res);
         }
     }
     public void doPost(HttpServletRequest req,HttpServletResponse res)throws IOException,ServletException{
@@ -42,7 +44,7 @@ public class Account_servlet extends HttpServlet {
             String password=req.getParameter("password");
             Cusers User=new Cusers();
             user data=User.selectOne(email);
-            if(!password.equals(data.getPassword()))throw new IOException("invalide password");
+            if(!password.equals(data.getPassword()))throw new Exception("invalide password");
             if(data.getRole().equals("admin")){
                 new view_users(req,res);
             }
@@ -57,7 +59,8 @@ public class Account_servlet extends HttpServlet {
             throw new RuntimeException(e);
         }
         catch (Exception ex){
-
+            System.err.println(ex.getMessage());
+            req.getRequestDispatcher("login.jsp").forward(req,res);
         }
     }
 }
