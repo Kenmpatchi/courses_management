@@ -23,8 +23,8 @@ public class viewCourses {
                         "<td><form action='viewCourse' method='get'>" +
                         "<input type='hidden' name='course_id' value='"+c.getCourse_id()+"'>" +
                         "<input type='submit' value='view'>" +
-                        "</form></td></tr>" +
-                        "<td><button><a href='Pupdate_course.jsp?course_id="+c.getCourse_id()+"'>update</a></button></td></tr>";
+                        "</form></td>" +
+                        "<td><a href='Pupdate_course.jsp?course_id="+c.getCourse_id()+"'>update</a></td></tr>";
             }
             courses += "</table>";
             req.setAttribute("courses", courses);

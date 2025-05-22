@@ -1,0 +1,88 @@
+body{
+    background-image: url("./images/2935cca659e318bed181a5f6adde1d6f.jpg");
+    background-size: cover;
+}
+div{
+    background-image: url("images/0.jpg");
+    background-size: cover;
+    font-family: Dubai;
+    color: cornsilk;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+div {
+    animation: fadeOn 2s ease-in-out forwards;
+}
+
+@keyframes fadeOn {
+    from {
+        width:0%;
+    }
+    to {
+        width:100%;
+    }
+}
+input{
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+div{
+    display: flex;
+    flex-direction: column;
+
+}
+h1{
+    align-self: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+table{
+    align-self: center;
+}
+input:hover{
+    background-color: cyan;
+}
+.btn:hover{
+    background-color: green;
+    align-self: center;
+}
+a{
+    color: cornflowerblue;
+}
+a:hover{
+    color:yellow;
+}
+tr {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+tr:nth-child(1) { animation-delay: 0.3s; }
+tr:nth-child(2) { animation-delay: 0.6s; }
+tr:nth-child(3) { animation-delay: 0.9s; }
+tr:nth-child(4) { animation-delay: 1.2s; }
+tr:nth-child(5) { animation-delay: 1.5s; }
+tr:nth-child(6) { animation-delay: 1.8s; }
+tr:nth-child(7) { animation-delay: 2.1s; }

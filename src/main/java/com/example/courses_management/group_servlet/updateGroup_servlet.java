@@ -23,6 +23,7 @@ public class updateGroup_servlet extends HttpServlet {
             Cgroups Cg=new Cgroups();
             Cg.update(g);
             new viewGroups(professor_id,req,res);
+
         }
         catch(SQLException|ClassNotFoundException e){
             throw new RuntimeException(e);

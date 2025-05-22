@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>courses</title>
+    <link rel="stylesheet" href="view_style.css">
 </head>
 <body>
+<script src="logout.js"></script>
+    <h1>List of courses</h1>
       ${courses}
       <a href="Padd_courses.jsp?group_id=<%=request.getAttribute("group_id")%>">add course from here 👌</a>
 </body>

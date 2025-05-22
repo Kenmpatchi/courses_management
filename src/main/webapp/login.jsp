@@ -9,9 +9,10 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div style="display: flex;flex-direction: column">
+<div >
     <h1>welcome back 👌</h1>
 <form action="account" method="post">
 <table>
@@ -23,7 +24,7 @@
 </td></tr>
     <tr><td rowspan="2">
         <a href="index.jsp">sing in ☠️</a><br>
-        <input type="submit" value="log in">
+        <input type="submit" value="log in" class="btn">
     </td></tr>
 </table>
 </form>

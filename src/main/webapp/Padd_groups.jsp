@@ -9,8 +9,43 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        body{
+            background-color: darkgray;
+            font-family: Dubai;
+            color: black;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            color: darkslategray;
+        }
+        form{
+            width: 400px;
+            height: 400px;
+            border: 4px;
+        }
+        input{
+            padding: 5px;
+            font-size: 16px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+        }
+        input:focus{
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+    </style>
 </head>
 <body>
+<script src="logout.js"></script>
+    <h1>add groupe 😊</h1>
     <form action="Groupsetting" method="get">
         <table><tr><td>
             name group :
@@ -27,5 +62,6 @@
             <input type="submit" value="add">
         </td></tr></table>
     </form>
+
 </body>
 </html>

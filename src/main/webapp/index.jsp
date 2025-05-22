@@ -3,11 +3,12 @@
 <html>
 <head>
     <title>course</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body >
-<div style="display: flex;flex-direction: column;" >
+<div>
 <h1 >sing in</h1>
-<form action="account" method="get" style="align-items: center">
+<form action="account" method="get">
     <table>
         <tr><td>first name :</td><td>
             <input type="text" name="first_name">
@@ -29,7 +30,7 @@
         </td></tr>
         <tr><td rowspan="2">
             <a href="login.jsp">if u already had an account !!</a><br>
-            <input type="submit" value="sign in">
+            <input type="submit" value="sign in" class="btn">
         </td></tr>
     </table>
 </form>

@@ -20,14 +20,14 @@ public class viewCourses_servlet extends HttpServlet {
             for (course c : Cc.selectAll(group_id)) {
                 courses += "<tr><td>" + c.getName() + "</td>" +
                         "<td><form action='deleteCourse' method='post'>" +
-                        "    <input type='hidden' name='group_id' value='"+c.getCourse_id()+"'>" +
+                        "    <input type='hidden' name='course_id' value='"+c.getCourse_id()+"'>" +
                         "    <input type='submit' value='delete'>" +
                         "</form></td>" +
                         "<td><form action='viewCourse' method='get'>" +
-                        "<input type='hidden' name='group_id' value='"+c.getCourse_id()+"'>" +
+                        "<input type='hidden' name='course_id' value='"+c.getCourse_id()+"'>" +
                         "<input type='submit' value='view'>" +
                         "</form></td>" +
-                        "<td><button><a href='Pupdate_course.jsp?course_id="+c.getCourse_id()+"'>update</a></button></td></tr>";
+                        "<td><a href='Pupdate_course.jsp?course_id="+c.getCourse_id()+"'>update</a></td></tr>";
             }
             courses += "</table>";
             req.setAttribute("courses", courses);

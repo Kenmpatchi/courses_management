@@ -1,0 +1,15 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    font-family: "Courier New", monospace;
+    background: #1a1a1a;
+    color: cornsilk;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}

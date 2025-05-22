@@ -9,8 +9,11 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="view_style.css">
 </head>
 <body>
+<script src="logout.js"></script>
+<h1>List of Users</h1>
 <%=request.getAttribute("users")%>
 </body>
 </html>

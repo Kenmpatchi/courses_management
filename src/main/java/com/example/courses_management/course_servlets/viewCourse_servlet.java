@@ -19,8 +19,8 @@ public class viewCourse_servlet extends HttpServlet {
             Ccourses Cc = new Ccourses();
             course c=Cc.selectbyid(course_id);
             String name=c.getName();
-            String Course="<h1>"+c.getTitle()+"</h1><br>" +
-                    "<h2>"+c.getDescription()+"</h2><br>" +
+            String Course="<h1>"+c.getTitle()+"</h1>" +
+                    "<h2>"+c.getDescription()+"</h2>" +
                     "<p>"+c.getMain_content()+"</p>";
             req.setAttribute("course",Course);
             req.setAttribute("name",name);

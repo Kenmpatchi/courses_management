@@ -9,8 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="OneView.css">
 </head>
 <body>
+<div>
+    <script src="logout.js"></script>
+    <h1>hello</h1>
       ${aff}
+</div>
 </body>
 </html>
